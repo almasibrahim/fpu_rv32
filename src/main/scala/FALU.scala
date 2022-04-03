@@ -33,16 +33,13 @@ class FALU extends Module {
                     Mux(extraRes(23) === BitPat("b1"), Cat(extraRes(23), extraRes(22, 0)) >> 1.U,
                     Cat(extraRes(23), extraRes(22, 0) >> 1.U)))
 
-    // val resRShift1 = WireInit()
-    // dontTouch(resRShift1)
     val resSignBit = Wire(UInt(2.W))
     resSignBit := res(23,22)
 
-    // res := Mux(extraRes === BitPat("b0"), Cat(res(23), expP1, res(22,0)),
-    //                 Mux(extraRes === BitPat("b1"), Cat(extraRes(23), extraRes(22, 0)) >> 1.U,
-    //                 0.U))))
 
     val expP1 = WireInit(expBitIn1 + 1.U)
+
+    // val diffCase1 = WireInit(expBitIn1 - expBitIn1)
 
     when(expBitIn1 === expBitIn2){
         io.result := MuxCase(
@@ -56,7 +53,18 @@ class FALU extends Module {
                     0.U))))
                 ),
             )    
-        )}.otherwise{
+        )
+    }
+    // .elsewhen(expBitIn1 > expBitIn2){
+    //     io.result := MuxCase(
+    //         0.U,
+    //         Array(
+    //             (io.aluCtl === 10.U) -> (
+    //             ),
+    //         )    
+    //     )
+    // }
+    .otherwise{
         io.result := DontCare
     }
 

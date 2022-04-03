@@ -1,13 +1,13 @@
-[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly FALUTest -- -DwriteVcd=1, Some(517bc251-e0b8-433e-bf1b-831d599161de), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly FALUTest -- -DwriteVcd=1, Some(1c6e8bc9-b54c-444a-8486-67eea40390d5), Some(CommandSource(console0)))[0m
 [0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
 [0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/talha/fpu_rv32/target/scala-2.12/test-classes ...[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mFALUTest:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- FALU Test[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 6 seconds, 24 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 6 seconds, 286 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
-[0m[[0m[32msuccess[0m] [0m[0mTotal time: 8 s, completed Apr 3, 2022 4:47:42 PM[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 7 s, completed Apr 3, 2022 5:01:45 PM[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

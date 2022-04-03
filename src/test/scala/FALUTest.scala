@@ -9,8 +9,8 @@ class FALUTest extends FreeSpec with ChiselScalatestTester {
 
   "FALU Test" in {
     test(new FALU()).withAnnotations(Seq(VerilatorBackendAnnotation)){ c =>
-      c.io.input1.poke("h44BB8000".U)
-      c.io.input2.poke("h44BB8000".U)
+      c.io.input1.poke("h3A03126F".U)
+      c.io.input2.poke("h3C07FCB9".U)
       c.io.aluCtl.poke(10.U)
       c.clock.step(100)
     }
