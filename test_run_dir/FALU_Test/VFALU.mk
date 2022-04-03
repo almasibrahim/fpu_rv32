@@ -10,23 +10,17 @@ default: VFALU
 # Perl executable (from $PERL)
 PERL = perl
 # Path to Verilator kit (from $VERILATOR_ROOT)
-VERILATOR_ROOT = /usr/local/share/verilator
-# Path to SystemPerl kit top (from $SYSTEMPERL)
-SYSTEMPERL = 
-# Path to SystemPerl kit includes (from $SYSTEMPERL_INCLUDE)
-SYSTEMPERL_INCLUDE = 
+VERILATOR_ROOT = /opt/homebrew/Cellar/verilator/4.200/share/verilator
 # SystemC include directory with systemc.h (from $SYSTEMC_INCLUDE)
 SYSTEMC_INCLUDE ?= 
 # SystemC library directory with libsystemc.a (from $SYSTEMC_LIBDIR)
 SYSTEMC_LIBDIR ?= 
 
 ### Switches...
-# SystemPerl output mode?  0/1 (from --sp)
-VM_SP = 0
 # SystemC output mode?  0/1 (from --sc)
 VM_SC = 0
-# SystemPerl or SystemC output mode?  0/1 (from --sp/--sc)
-VM_SP_OR_SC = 0
+# Legacy or SystemC output mode?  0/1 (from --sc)
+VM_SP_OR_SC = $(VM_SC)
 # Deprecated
 VM_PCLI = 1
 # Deprecated: SystemC architecture to find link library path (from $SYSTEMC_ARCH)
@@ -50,7 +44,7 @@ VM_USER_CLASSES = \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
-	/home/talha/fpu_rv32/test_run_dir/FALU_Test \
+	/Users/shahzaib/fpu_rv32/test_run_dir/FALU_Test \
 
 
 ### Default rules...
@@ -62,12 +56,12 @@ include $(VERILATOR_ROOT)/include/verilated.mk
 ### Executable rules... (from --exe)
 VPATH += $(VM_USER_DIR)
 
-FALU-harness.o: /home/talha/fpu_rv32/test_run_dir/FALU_Test/FALU-harness.cpp
-	$(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+FALU-harness.o: /Users/shahzaib/fpu_rv32/test_run_dir/FALU_Test/FALU-harness.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 
 ### Link rules... (from --exe)
-VFALU: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a
-	$(LINK) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@ $(LIBS) $(SC_LIBS) 2>&1 | c++filt
+VFALU: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a $(VM_HIER_LIBS)
+	$(LINK) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) $(LIBS) $(SC_LIBS) -o $@
 
 
 # Verilated -*- Makefile -*-
