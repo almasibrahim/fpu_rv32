@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/home/talha/fpu_rv32/src/main/scala/FALU.scala:34:26: ';' expected but ')' found.[0m
+[0m[[0m[31merror[0m] [0m[0m                    0.U))))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
