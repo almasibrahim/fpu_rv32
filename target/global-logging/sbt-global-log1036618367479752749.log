@@ -1,0 +1,46 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly NFALUTest, Some(f6fa7e65-7cde-460c-8a41-c53451b052c3), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/almas/Music/fpu_rv32/target/scala-2.12/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/almas/Music/fpu_rv32/src/main/scala/NFALU.scala:73:21: method != in class UInt is deprecated (since 3.0): Use '=/=', which avoids potential precedence problems[0m
+[0m[[0m[33mwarn[0m] [0m[0m    when(resFrac(23)!=1.U && resExp!=0.U){[0m
+[0m[[0m[33mwarn[0m] [0m[0m                    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/almas/Music/fpu_rv32/src/main/scala/NFALU.scala:73:36: method != in class UInt is deprecated (since 3.0): Use '=/=', which avoids potential precedence problems[0m
+[0m[[0m[33mwarn[0m] [0m[0m    when(resFrac(23)!=1.U && resExp!=0.U){[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mNFALUTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- NFALU Test *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  firrtl.passes.PassExceptions: firrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 73:17]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 23).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 74:22]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 3).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 77:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 4).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 80:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 5).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 83:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 6).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 86:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 7).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 89:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 8).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 92:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 9).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 95:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 10).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 98:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 11).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 101:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 12).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 104:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 13).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 107:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 14).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 110:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 15).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 113:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 16).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 116:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 17).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 119:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 18).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 122:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 19).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 125:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 20).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 128:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 21).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckWidths$BitsWidthException:  @[NFALU.scala 131:27]: [target ~NFALU|NFALU] High bit 23 in bits operator is larger than input width 23 in bits(resFrac, 23, 22).[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.PassException: 21 errors detected![0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 3 seconds, 645 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	NFALUTest[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 13 s, completed Apr 6, 2022, 2:47:21 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

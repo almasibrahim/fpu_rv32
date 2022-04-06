@@ -1,0 +1,18 @@
+[
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~NFALU|NFALU>io_result",
+    "sources":[
+      "~NFALU|NFALU>io_input1",
+      "~NFALU|NFALU>io_input2"
+    ]
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/NFALU_Test"
+  }
+]
