@@ -1,0 +1,18 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly NFALUTest, Some(edb5f3db-6284-47e3-b433-79598fc57d60), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/almas/Music/fpu_rv32/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/home/almas/Music/fpu_rv32/src/main/scala/NFALU.scala:73:25: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.Bool[0m
+[0m[[0m[31merror[0m] [0m[0m    when(resFrac(23)!=1 && resExp!=0){[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/almas/Music/fpu_rv32/src/main/scala/NFALU.scala:74:28: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.Bool[0m
+[0m[[0m[31merror[0m] [0m[0m        when (resFrac(23,3)==20.U){[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 11 s, completed Apr 6, 2022, 2:45:33 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
