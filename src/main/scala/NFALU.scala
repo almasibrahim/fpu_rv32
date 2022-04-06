@@ -24,7 +24,7 @@ class NFALU extends Module {
     val fracBitIn2 = Wire(UInt(23.W))
     fracBitIn2 := io.input2(22, 0)
 
-    val xorSign = signBitIn1 ^ signBitIn2
+    val xorSign = signBitIn1 ^ signBitIn2     
     val andSign = signBitIn1 & signBitIn2 
 
     val resFrac = Wire(UInt(24.W))
