@@ -33,8 +33,9 @@ class FALU extends Module {
                     Mux(extraRes(23) === BitPat("b1"), Cat(extraRes(23), extraRes(22, 0)) >> 1.U,
                     Cat(extraRes(23), extraRes(22, 0) >> 1.U)))
 
-    val resSignBit = Wire(UInt(2.W))
-    resSignBit := res(23,22)
+    val resSignBit = Wire(UInt(1.W))
+    // resSignBit := res(23,22)
+    resSignBit := signBitIn1 && signBitIn2
 
 
     val expP1 = WireInit(expBitIn1 + 1.U)
@@ -45,12 +46,12 @@ class FALU extends Module {
         io.result := MuxCase(
             0.U,
             Array(
-                (io.aluCtl === 10.U) -> (
-                    Mux(resSignBit === BitPat("b00"), Cat(res(23), expP1, res(22,0)),
-                    Mux(resSignBit === BitPat("b01"), Cat(res(23), expP1, res(22,0)),
-                    Mux(resSignBit === BitPat("b10"), Cat(res(23), expP1, res(22,0)),
-                    Mux(resSignBit === BitPat("b11"), Cat(res(23), expP1, res(22,0)),
-                    0.U))))
+                (io.aluCtl === 10.U) -> (Cat(resSignBit, expP1, res(22,0))
+                    // Mux(resSignBit === BitPat("b00"), Cat(resSignBit, expP1, res(22,0)),0.U)
+                    // Mux(resSignBit === BitPat("b01"), Cat(res(23), expP1, res(22,0)),
+                    // Mux(resSignBit === BitPat("b10"), Cat(res(23), expP1, res(22,0)),
+                    // Mux(resSignBit === BitPat("b11"), Cat(res(23), expP1, res(22,0)),
+                    // 0.U))))
                 ),
             )    
         )

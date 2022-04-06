@@ -35,7 +35,16 @@ class NFALU extends Module {
 
     when(xorSign && (fracBitIn1 === fracBitIn2)){
         io.result := 0.U
-    }.otherwise{
+    }
+    .elsewhen(xorSign && (fracBitIn1 > fracBitIn2)){
+        resFrac := (fracBitIn1 + fracBitIn2) >> 1.U
+        io.result := Cat(signBitIn1, resExp, resFrac)
+    }
+    .elsewhen(xorSign && (fracBitIn1 < fracBitIn2)){
+        resFrac := (fracBitIn1 + fracBitIn2) >> 1.U
+        io.result := Cat(signBitIn2, resExp, resFrac)
+    }
+    .otherwise{
         when(fracBitIn1 === fracBitIn2){
             resFrac := fracBitIn1
         }.otherwise{
