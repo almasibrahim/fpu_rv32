@@ -55,7 +55,7 @@ class NFALU extends Module {
         when(fracBitIn1 === fracBitIn2){
             resFrac := fracBitIn1
         }.otherwise{
-            resFrac := (fracBitIn1 + fracBitIn2) >> 1.U
+            resFrac := (Cat(0.B, fracBitIn1) + Cat(0.B, fracBitIn2)) >> 1.U
         }
         resExp := expBitIn1 + 1.U
         io.result := Cat(andSign, resExp, resFrac)
