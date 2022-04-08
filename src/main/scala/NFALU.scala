@@ -63,21 +63,86 @@ class NFALU extends Module {
     }
     .elsewhen(expBitIn1 > expBitIn2){
         val diff = WireInit(expBitIn1 - expBitIn2)
-        // val shiftDiff = Wire(Fill(8, 1.B) && dif)
-        // shiftDiff := fracBitIn2(diff.asInstanceOf[Int], 0)
-        val tmp_mant = WireInit(Cat(signBitIn2, fracBitIn2) >> diff)
+        when(diff === 2.U){
+            val shiftDiff = Wire(UInt(2.W))
+            shiftDiff := fracBitIn2(1,0)
+            dontTouch(shiftDiff)
 
-         val o_mant = Wire(UInt(24.W))
+            
+            val tmp_mant = Wire(UInt(23.W))
+            tmp_mant := Cat(signBitIn2, fracBitIn2) >> diff
+            dontTouch(tmp_mant)
 
-        when(xorSign){
-            o_mant := Cat(0.B, fracBitIn1) - Cat(0.B, tmp_mant)
-        }.otherwise{
+            val o_mant = Wire(UInt(24.W))
+
+            
             o_mant := (Cat(0.B, fracBitIn1) + Cat(0.B, tmp_mant)) >> 1.U
+            
+
+
+            // when(xorSign){
+            //     o_mant := Cat(0.B, fracBitIn1) - Cat(0.B, tmp_mant)
+            // }.otherwise{
+            //     o_mant := (Cat(0.B, fracBitIn1) + Cat(0.B, tmp_mant)) >> 1.U
+            // }
+
+            resFrac := o_mant
+            resExp := expBitIn1
+            io.result := Cat(andSign, resExp, resFrac(22,0))
+        }
+        // .elsewhen(diff === 3.U){
+        //     val shiftDiff = Wire(UInt(3.W))
+        //     shiftDiff := fracBitIn2(2,0)
+        //     dontTouch(shiftDiff)
+        //     val tmp_mant = WireInit(Cat(signBitIn2, fracBitIn2) >> diff)
+
+        //     val o_mant = Wire(UInt(24.W))
+
+        //     when(xorSign){
+        //         o_mant := Cat(0.B, fracBitIn1) - Cat(0.B, tmp_mant)
+        //     }.otherwise{
+        //         o_mant := (Cat(0.B, fracBitIn1) + Cat(0.B, tmp_mant)) >> 1.U
+        //     }
+
+        //     resFrac := o_mant
+        //     resExp := expBitIn1
+        //     io.result := Cat(signBitIn1, temExp, temFrac(22,0))
+        // }.elsewhen(diff === 4.U){
+        //     val shiftDiff = Wire(UInt(4.W))
+        //     shiftDiff := fracBitIn2(3,0)
+        //     dontTouch(shiftDiff)
+        //     val tmp_mant = WireInit(Cat(signBitIn2, fracBitIn2) >> diff)
+
+        //     val o_mant = Wire(UInt(24.W))
+
+        //     when(xorSign){
+        //         o_mant := Cat(0.B, fracBitIn1) - Cat(0.B, tmp_mant)
+        //     }.otherwise{
+        //         o_mant := (Cat(0.B, fracBitIn1) + Cat(0.B, tmp_mant)) >> 1.U
+        //     }
+
+        //     resFrac := o_mant
+        //     resExp := expBitIn1
+        //     io.result := Cat(signBitIn1, temExp, temFrac(22,0))
+        // }
+        .otherwise{
+            io.result := 0.U
         }
 
-        resFrac := o_mant
-        resExp := expBitIn1
-        io.result := Cat(signBitIn1, temExp, temFrac(22,0))
+        // val upper = WireInit((1.U << diff) - 1.U)
+        // val tmp_mant = WireInit(Cat(signBitIn2, fracBitIn2) >> diff)
+
+        // val o_mant = Wire(UInt(24.W))
+
+        // when(xorSign){
+        //     o_mant := Cat(0.B, fracBitIn1) - Cat(0.B, tmp_mant)
+        // }.otherwise{
+        //     o_mant := (Cat(0.B, fracBitIn1) + Cat(0.B, tmp_mant)) >> 1.U
+        // }
+
+        // resFrac := o_mant
+        // resExp := expBitIn1
+        // io.result := Cat(signBitIn1, temExp, temFrac(22,0))
     }
     .otherwise{
         io.result := 0.U
