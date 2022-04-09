@@ -35,12 +35,20 @@ VL_MODULE(VNFALU) {
     // LOCAL SIGNALS
     // Internals; generally not touched by application code
     CData/*0:0*/ NFALU__DOT__xorSign;
+    CData/*0:0*/ NFALU__DOT__andSign;
+    CData/*7:0*/ NFALU__DOT__diff;
+    CData/*7:0*/ NFALU__DOT___GEN_14;
     CData/*7:0*/ NFALU__DOT__resExp;
-    CData/*7:0*/ NFALU__DOT___GEN_29;
+    CData/*7:0*/ NFALU__DOT___GEN_57;
     CData/*7:0*/ NFALU__DOT__temExp;
-    IData/*22:0*/ NFALU__DOT__resFrac;
-    QData/*37:0*/ NFALU__DOT___GEN_28;
-    QData/*53:0*/ NFALU__DOT___GEN_48;
+    IData/*23:0*/ NFALU__DOT___tmp_mant_T_1;
+    IData/*23:0*/ NFALU__DOT__o_mant;
+    IData/*23:0*/ NFALU__DOT___GEN_13;
+    IData/*23:0*/ NFALU__DOT__resFrac;
+    IData/*31:0*/ NFALU__DOT___io_result_T_2;
+    QData/*38:0*/ NFALU__DOT___GEN_56;
+    QData/*54:0*/ NFALU__DOT___GEN_76;
+    QData/*54:0*/ NFALU__DOT___GEN_78;
     
     // LOCAL VARIABLES
     // Internals; generally not touched by application code

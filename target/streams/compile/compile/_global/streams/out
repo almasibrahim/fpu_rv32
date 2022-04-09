@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/almas/Music/fpu_rv32/src/main/scala/NFALU.scala:146:35: Unmatched closing brace '}' ignored here[0m
-[0m[[0m[31merror[0m] [0m[0m            temExp := resExp - 2.U}[0m
-[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/almas/Videos/fpu_rv32/src/main/scala/NFALU.scala:91:13: ')' expected but '}' found.[0m
+[0m[[0m[31merror[0m] [0m[0m            }[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

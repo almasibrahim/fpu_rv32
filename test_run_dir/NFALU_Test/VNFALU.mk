@@ -44,7 +44,7 @@ VM_USER_CLASSES = \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
-	/home/almas/Music/fpu_rv32/test_run_dir/NFALU_Test \
+	/home/almas/Videos/fpu_rv32/test_run_dir/NFALU_Test \
 
 
 ### Default rules...
@@ -56,7 +56,7 @@ include $(VERILATOR_ROOT)/include/verilated.mk
 ### Executable rules... (from --exe)
 VPATH += $(VM_USER_DIR)
 
-NFALU-harness.o: /home/almas/Music/fpu_rv32/test_run_dir/NFALU_Test/NFALU-harness.cpp
+NFALU-harness.o: /home/almas/Videos/fpu_rv32/test_run_dir/NFALU_Test/NFALU-harness.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 
 ### Link rules... (from --exe)

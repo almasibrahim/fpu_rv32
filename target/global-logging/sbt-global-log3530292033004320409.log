@@ -1,0 +1,36 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly NFALUTest -- -DwriteVcd=1, Some(00110669-c5ed-4fb2-ac36-f8bb2bc5c5cd), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskStart, {"taskId":{"id":"19","parents":[]},"eventTime":1649502042364,"message":"Compiling root","dataKind":"compile-task","data":{"target":{"uri":"file:/home/almas/Videos/fpu_rv32/#root/Compile"}}})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/publishDiagnostics, {"textDocument":{"uri":"file:///home/almas/Videos/fpu_rv32/src/main/scala/FALU.scala"},"buildTarget":{"uri":"file:/home/almas/Videos/fpu_rv32/#root/Compile"},"diagnostics":[],"reset":true})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/publishDiagnostics, {"textDocument":{"uri":"file:///home/almas/Videos/fpu_rv32/src/main/scala/NFALU.scala"},"buildTarget":{"uri":"file:/home/almas/Videos/fpu_rv32/#root/Compile"},"diagnostics":[],"reset":true})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/publishDiagnostics, {"textDocument":{"uri":"file:///home/almas/Videos/fpu_rv32/src/main/scala/FALUControls.scala"},"buildTarget":{"uri":"file:/home/almas/Videos/fpu_rv32/#root/Compile"},"diagnostics":[],"reset":true})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskFinish, {"taskId":{"id":"19","parents":[]},"eventTime":1649502042380,"message":"Compiled root","status":1,"dataKind":"compile-report","data":{"target":{"uri":"file:/home/almas/Videos/fpu_rv32/#root/Compile"},"errors":0,"warnings":0,"time":16}})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskStart, {"taskId":{"id":"20","parents":[]},"eventTime":1649502042385,"message":"Compiling root-test","dataKind":"compile-task","data":{"target":{"uri":"file:/home/almas/Videos/fpu_rv32/#root/Test"}}})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/publishDiagnostics, {"textDocument":{"uri":"file:///home/almas/Videos/fpu_rv32/src/test/scala/ADD_00_case.scala"},"buildTarget":{"uri":"file:/home/almas/Videos/fpu_rv32/#root/Test"},"diagnostics":[],"reset":true})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/publishDiagnostics, {"textDocument":{"uri":"file:///home/almas/Videos/fpu_rv32/src/test/scala/NFALUTest.scala"},"buildTarget":{"uri":"file:/home/almas/Videos/fpu_rv32/#root/Test"},"diagnostics":[],"reset":true})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/publishDiagnostics, {"textDocument":{"uri":"file:///home/almas/Videos/fpu_rv32/src/test/scala/FALUTest.scala"},"buildTarget":{"uri":"file:/home/almas/Videos/fpu_rv32/#root/Test"},"diagnostics":[],"reset":true})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskFinish, {"taskId":{"id":"20","parents":[]},"eventTime":1649502042394,"message":"Compiled root-test","status":1,"dataKind":"compile-report","data":{"target":{"uri":"file:/home/almas/Videos/fpu_rv32/#root/Test"},"errors":0,"warnings":0,"time":9}})[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mNFALUTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- NFALU Test *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  firrtl.passes.CheckInitialization$RefNotInitializedException: @[NFALU.scala 37:24] : [module NFALU]  Reference tmp_mant is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : tmp_mant <= mux(_T, VOID, mux(_T_8, mux(_T_9, _tmp_mant_T_1, VOID), VOID))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"\u001b[32mNFALUTest:\u001b[0m"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"\u001b[31m- NFALU Test *** FAILED ***\u001b[0m"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"\u001b[31m  firrtl.passes.CheckInitialization$RefNotInitializedException: @[NFALU.scala 37:24] : [module NFALU]  Reference tmp_mant is not fully initialized.\u001b[0m\n\u001b[31m   : tmp_mant <= mux(_T, VOID, mux(_T_8, mux(_T_9, _tmp_mant_T_1, VOID), VOID))\u001b[0m"})[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"\u001b[31m  ...\u001b[0m"})[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 642 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"\u001b[36mRun completed in 1 second, 642 milliseconds.\u001b[0m\n\u001b[36mTotal number of tests run: 1\u001b[0m\n\u001b[36mSuites: completed 1, aborted 0\u001b[0m\n\u001b[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0\u001b[0m\n\u001b[31m*** 1 TEST FAILED ***\u001b[0m"})[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"Failed tests:"})[0m
+[0m[[0m[31merror[0m] [0m[0m	NFALUTest[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"\tNFALUTest"})[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[0mdebug[0m] [0m[0mjsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"(Test / \u001b[31mtestOnly\u001b[0m) sbt.TestsFailedException: Tests unsuccessful"})[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 2 s, completed Apr 9, 2022, 4:00:44 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

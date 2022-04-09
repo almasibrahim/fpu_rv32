@@ -10,6 +10,101 @@ class NFALUTest extends FreeSpec with ChiselScalatestTester {
   "NFALU Test" in {
     test(new NFALU()).withAnnotations(Seq(VerilatorBackendAnnotation)){ c =>
 
+      //exp1>exp2
+
+      //pass without rounding mode
+
+      // c.io.input1.poke("h35C29D9F".U)     //0.00000145
+      // c.io.input2.poke("h34B6893F".U)     //0.00000034
+      // c.io.aluCtl.poke(10.U)              //pass (round+1)
+      // c.clock.step(100)
+
+      // c.io.input1.poke("h4248676D".U)     //50.101
+      // c.io.input2.poke("h40B67EFA".U)     //5.703
+      // c.io.aluCtl.poke(10.U)              //pass
+      // c.clock.step(100)
+
+      // c.io.input1.poke("h372251CF".U)     //9.675E-6
+      // c.io.input2.poke("h367D001B".U)     //0.00000377
+      // c.io.aluCtl.poke(10.U)              //pass (round+1)
+      // c.clock.step(100)
+
+      // c.io.input1.poke("hC227EB85".U)     //-41.98
+      // c.io.input2.poke("hC17C7AE1".U)     //-15.78
+      // c.io.aluCtl.poke(10.U)              //pass
+      // c.clock.step(100)
+
+      // c.io.input1.poke("h418FD70A".U)     //17.98
+      // c.io.input2.poke("h4098F5C3".U)     //4.78
+      // c.io.aluCtl.poke(10.U)              //pass (round +1)
+      // c.clock.step(100)
+
+
+
+    // my
+      // c.io.input1.poke("hC2480000".U)     //-50
+      // c.io.input2.poke("hC1380000".U)     //-11.5
+      // c.io.aluCtl.poke(10.U)              //pass
+      // c.clock.step(100)
+
+      // c.io.input1.poke("hC1B40000".U)     //-22.5
+      // c.io.input2.poke("hC0B00000".U)     //-5.5
+      // c.io.aluCtl.poke(10.U)              //pass
+      // c.clock.step(100)
+
+      // c.io.input1.poke("hC20A0000".U)     //-34.5
+      // c.io.input2.poke("hC1380000".U)     //-11.5
+      // c.io.aluCtl.poke(10.U)              //pass
+      // c.clock.step(100)
+
+      // c.io.input1.poke("h420A0000".U)     //34.5
+      // c.io.input2.poke("h41380000".U)     //11.5
+      // c.io.aluCtl.poke(10.U)              //pass (shift 3)
+      // c.clock.step(100)
+
+      // c.io.input1.poke("h41B40000".U)     //22.5
+      // c.io.input2.poke("h40200000".U)     //2.5
+      // c.io.aluCtl.poke(10.U)              //pass (shift 3)
+      // c.clock.step(100)
+
+      // c.io.input1.poke("h41AC0000".U)     //21.5
+      // c.io.input2.poke("h40200000".U)     //2.5
+      // c.io.aluCtl.poke(10.U)              //pass (shift 3)
+      // c.clock.step(100)
+
+      // c.io.input1.poke("h41080000".U)     //8.5 
+      // c.io.input2.poke("h40200000".U)     //2.5
+      // c.io.aluCtl.poke(10.U)              //pass
+      // c.clock.step(100)
+
+      // c.io.input1.poke("h412CCCCD".U)     //10.8  
+      // c.io.input2.poke("h406CCCCD".U)     //3.7
+      // c.io.aluCtl.poke(10.U)              //pass
+      // c.clock.step(100)
+
+      // c.io.input1.poke("h411CCCCD".U)     //9.8
+      // c.io.input2.poke("h40000000".U)      //2.0
+      // c.io.aluCtl.poke(10.U)              //pass
+      // c.clock.step(100)
+
+      // c.io.input1.poke("h411CCCCD".U)     //9.8   
+      // c.io.input2.poke("h4039999A".U)     //2.9 
+      // c.io.aluCtl.poke(10.U)              //pass
+      // c.clock.step(100)
+
+      // c.io.input1.poke("hC1F20002".U)     
+      // c.io.input2.poke("hC0C00185".U)      
+      // c.io.aluCtl.poke(10.U)              //pass
+      // c.clock.step(100)
+
+      //exp1=exp2
+
+       //pass
+      // c.io.input1.poke("h412B3333".U)     // (10.7)
+      // c.io.input2.poke("hC14B3334".U)     //(-12.700001)  
+      // c.io.aluCtl.poke(10.U)              //expected output (C0000004)
+      // c.clock.step(100)
+
       //pass
       // c.io.input1.poke("hC0200000".U)     // (-2.5)
       // c.io.input2.poke("h40333333".U)     //(2.8)  

@@ -12,6 +12,18 @@
     "emitter":"firrtl.VerilogEmitter"
   },
   {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~NFALU|NFALU>tmp_mant"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~NFALU|NFALU>shiftDiff_1"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~NFALU|NFALU>shiftDiff"
+  },
+  {
     "class":"firrtl.transforms.BlackBoxTargetDirAnno",
     "targetDir":"test_run_dir/NFALU_Test"
   }
