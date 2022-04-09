@@ -14,10 +14,10 @@ class NFALUTest extends FreeSpec with ChiselScalatestTester {
 
       //pass without rounding mode
 
-      // c.io.input1.poke("h35C29D9F".U)     //0.00000145
-      // c.io.input2.poke("h34B6893F".U)     //0.00000034
-      // c.io.aluCtl.poke(10.U)              //pass (round+1)
-      // c.clock.step(100)
+      c.io.input1.poke("h35C29D9F".U)     //0.00000145
+      c.io.input2.poke("h34B6893F".U)     //0.00000034
+      c.io.aluCtl.poke(10.U)              //pass (round+1)
+      c.clock.step(100)
 
       // c.io.input1.poke("h4248676D".U)     //50.101
       // c.io.input2.poke("h40B67EFA".U)     //5.703

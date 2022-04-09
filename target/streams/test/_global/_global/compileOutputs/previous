@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-["sbt.Task[scala.collection.Seq[java.nio.file.Path]]",["/home/almas/Videos/fpu_rv32/target/scala-2.12/test-classes/ADD_00_case.class","/home/almas/Videos/fpu_rv32/target/scala-2.12/test-classes/FALUTest.class","/home/almas/Videos/fpu_rv32/target/scala-2.12/test-classes/NFALUTest.class","/home/almas/Videos/fpu_rv32/target/scala-2.12/test-zinc/inc_compile_2.12.zip"]]
-=======
-["sbt.Task[scala.collection.Seq[java.nio.file.Path]]",["/Users/shahzaib/fpu_rv32/target/scala-2.12/test-classes/ADD_00_case.class","/Users/shahzaib/fpu_rv32/target/scala-2.12/test-classes/FALUTest.class","/Users/shahzaib/fpu_rv32/target/scala-2.12/test-classes/NFALUTest.class","/Users/shahzaib/fpu_rv32/target/scala-2.12/test-zinc/inc_compile_2.12.zip"]]
->>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
+["sbt.Task[scala.collection.Seq[java.nio.file.Path]]",["/home/almas/Videos/fpu_rv32/target/scala-2.12/test-classes/ADD_00_case.class","/home/almas/Videos/fpu_rv32/target/scala-2.12/test-classes/FALUTest.class","/home/almas/Videos/fpu_rv32/target/scala-2.12/test-classes/NFALUTest.class","/home/almas/Videos/fpu_rv32/target/scala-2.12/test-classes/exp_not_eql_Test.class","/home/almas/Videos/fpu_rv32/target/scala-2.12/test-zinc/inc_compile_2.12.zip"]]

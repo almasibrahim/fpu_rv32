@@ -98,8 +98,7 @@ double sc_time_stamp () { return _Top_api->get_time_stamp(); }
 // Override Verilator definition so first $finish ends simulation
 // Note: VL_USER_FINISH needs to be defined when compiling Verilator code
 void vl_finish(const char* filename, int linenum, const char* hier) {
-  Verilated::runFlushCallbacks();
-Verilated::runExitCallbacks();
+  Verilated::flushCall();
 
   exit(0);
 }

@@ -1,4 +1,8 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(NFALUTest, org.scalatest.tools.Framework$$anon$1@1874c598, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly NFALUTest -- -DwriteVcd=1, Some(d7314d62-7380-4e79-824d-bb4815f4e421), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/almas/Videos/fpu_rv32/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /home/almas/Videos/fpu_rv32/target/scala-2.12/test-classes ...[0m
 [0m[[0m[31merror[0m] [0m[0mjava.lang.NumberFormatException: For input string: "======"[0m
 [0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)[0m
 [0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Long.parseLong(Long.java:692)[0m
@@ -50,57 +54,19 @@
 [0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:829)[0m
 [0m[[0m[31merror[0m] [0m[0mjava.lang.NumberFormatException: For input string: "======"[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mNFALUTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- NFALU Test[0m[0m
-[0m[[0m[31merror[0m] [0m[0mjava.lang.NumberFormatException: For input string: "======"[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Long.parseLong(Long.java:692)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Long.parseLong(Long.java:817)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.StringLike.toLong(StringLike.scala:309)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.StringLike.toLong$(StringLike.scala:309)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.StringOps.toLong(StringOps.scala:33)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestStatus$.$anonfun$read$1(TestStatusReporter.scala:42)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestStatus$.$anonfun$read$1$adapted(TestStatusReporter.scala:42)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.Iterator.foreach(Iterator.scala:943)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.Iterator.foreach$(Iterator.scala:943)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestStatus$.read(TestStatusReporter.scala:42)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestStatusReporter.succeeded$lzycompute(TestStatusReporter.scala:20)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestStatusReporter.succeeded(TestStatusReporter.scala:20)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestStatusReporter.endGroup(TestStatusReporter.scala:28)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestRunner.$anonfun$run$7(TestFramework.scala:156)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestRunner.$anonfun$run$7$adapted(TestFramework.scala:156)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestFramework$.$anonfun$safeForeach$1(TestFramework.scala:181)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestFramework$.$anonfun$safeForeach$1$adapted(TestFramework.scala:180)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.Iterator.foreach(Iterator.scala:943)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.Iterator.foreach$(Iterator.scala:943)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.IterableLike.foreach(IterableLike.scala:74)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestFramework$.safeForeach(TestFramework.scala:180)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestRunner.safeListenersCall(TestFramework.scala:166)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestRunner.run(TestFramework.scala:156)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.$anonfun$apply$1(TestFramework.scala:318)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:278)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:318)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:318)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.TestFunction.apply(TestFramework.scala:330)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Tests$.$anonfun$toTask$1(Tests.scala:435)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.std.Transform$$anon$3.$anonfun$apply$2(Transform.scala:46)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:68)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.work(Execute.scala:291)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:829)[0m
-[0m[[0m[31merror[0m] [0m[0mjava.lang.NumberFormatException: For input string: "======"[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- NFALU Test *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  java.lang.AssertionError: assertion failed: Compilation of verilator generated code failed for circuit NFALU in work dir test_run_dir/NFALU_Test[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.assert(Predef.scala:223)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.assert$.apply(Assert.scala:70)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.legacy.backends.verilator.VerilatorExecutive$.start(VerilatorExecutive.scala:115)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.defaults.package$.createDefaultTester(defaults.scala:24)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.ChiselScalatestTester$TestBuilder.apply(ChiselScalatestTester.scala:33)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at NFALUTest.$anonfun$new$1(NFALUTest.scala:11)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
 [0m[[0m[31merror[0m] [0m[0mjava.lang.NumberFormatException: For input string: "======"[0m
 [0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)[0m
 [0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Long.parseLong(Long.java:692)[0m
@@ -147,10 +113,14 @@
 [0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
 [0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:829)[0m
 [0m[[0m[31merror[0m] [0m[0mjava.lang.NumberFormatException: For input string: "======"[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 5 seconds, 937 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 2 seconds, 630 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	NFALUTest[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	NFALUTest[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 8 s, completed Apr 9, 2022, 11:06:26 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

@@ -4,25 +4,43 @@
 #include "VNFALU__Syms.h"
 
 
-void VNFALU::traceChgTop0(void* userp, VerilatedVcd* tracep) {
-    VNFALU__Syms* __restrict vlSymsp = static_cast<VNFALU__Syms*>(userp);
-    VNFALU* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Variables
-    if (VL_UNLIKELY(!vlSymsp->__Vm_activity)) return;
-    // Body
-    {
-        vlTOPp->traceChgSub0(userp, tracep);
+//======================
+
+void VNFALU::traceChg(VerilatedVcd* vcdp, void* userthis, uint32_t code) {
+    // Callback from vcd->dump()
+    VNFALU* t = (VNFALU*)userthis;
+    VNFALU__Syms* __restrict vlSymsp = t->__VlSymsp;  // Setup global symbol table
+    if (vlSymsp->getClearActivity()) {
+        t->traceChgThis(vlSymsp, vcdp, code);
     }
 }
 
-void VNFALU::traceChgSub0(void* userp, VerilatedVcd* tracep) {
-    VNFALU__Syms* __restrict vlSymsp = static_cast<VNFALU__Syms*>(userp);
-    VNFALU* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    vluint32_t* const oldp = tracep->oldp(vlSymsp->__Vm_baseCode + 1);
-    if (false && oldp) {}  // Prevent unused
+//======================
+
+
+void VNFALU::traceChgThis(VNFALU__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code) {
+    VNFALU* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    int c = code;
+    if (0 && vcdp && c) {}  // Prevent unused
     // Body
     {
-<<<<<<< HEAD
+        if (VL_UNLIKELY((1U & (vlTOPp->__Vm_traceActivity 
+                               | (vlTOPp->__Vm_traceActivity 
+                                  >> 1U))))) {
+            vlTOPp->traceChgThis__2(vlSymsp, vcdp, code);
+        }
+        vlTOPp->traceChgThis__3(vlSymsp, vcdp, code);
+    }
+    // Final
+    vlTOPp->__Vm_traceActivity = 0U;
+}
+
+void VNFALU::traceChgThis__2(VNFALU__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code) {
+    VNFALU* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    int c = code;
+    if (0 && vcdp && c) {}  // Prevent unused
+    // Body
+    {
         vcdp->chgBit(c+1,(vlTOPp->NFALU__DOT__xorSign));
         vcdp->chgBit(c+9,(vlTOPp->NFALU__DOT__andSign));
         vcdp->chgBus(c+17,(vlTOPp->NFALU__DOT__diff),8);
@@ -56,44 +74,15 @@ void VNFALU::traceChgSub0(void* userp, VerilatedVcd* tracep) {
         vcdp->chgBus(c+113,((0x7fffffU & (IData)(vlTOPp->NFALU__DOT___GEN_78))),23);
         vcdp->chgBus(c+121,(vlTOPp->NFALU__DOT__temExp),8);
         vcdp->chgBus(c+129,((0x7fffffU & vlTOPp->NFALU__DOT__resFrac)),23);
-=======
-        if (VL_UNLIKELY(vlTOPp->__Vm_traceActivity[1U])) {
-            tracep->chgBit(oldp+0,(vlTOPp->NFALU__DOT__xorSign));
-            tracep->chgIData(oldp+1,(vlTOPp->NFALU__DOT__resFrac),24);
-            tracep->chgCData(oldp+2,(vlTOPp->NFALU__DOT__resExp),8);
-            tracep->chgIData(oldp+3,((0xffffffU & (IData)(vlTOPp->NFALU__DOT___GEN_50))),24);
-            tracep->chgIData(oldp+4,((0x7fffffU & (IData)(vlTOPp->NFALU__DOT___GEN_50))),23);
-            tracep->chgCData(oldp+5,(vlTOPp->NFALU__DOT__temExp),8);
-            tracep->chgIData(oldp+6,((0x7fffffU & vlTOPp->NFALU__DOT__resFrac)),23);
-        }
-        tracep->chgBit(oldp+7,(vlTOPp->clock));
-        tracep->chgBit(oldp+8,(vlTOPp->reset));
-        tracep->chgIData(oldp+9,(vlTOPp->io_input1),32);
-        tracep->chgIData(oldp+10,(vlTOPp->io_input2),32);
-        tracep->chgCData(oldp+11,(vlTOPp->io_aluCtl),4);
-        tracep->chgCData(oldp+12,(vlTOPp->io_rmm),3);
-        tracep->chgIData(oldp+13,(vlTOPp->io_result),32);
-        tracep->chgBit(oldp+14,((1U & (vlTOPp->io_input1 
-                                       >> 0x1fU))));
-        tracep->chgBit(oldp+15,((1U & (vlTOPp->io_input2 
-                                       >> 0x1fU))));
-        tracep->chgCData(oldp+16,((0xffU & (vlTOPp->io_input1 
-                                            >> 0x17U))),8);
-        tracep->chgIData(oldp+17,((0x7fffffU & vlTOPp->io_input1)),23);
-        tracep->chgIData(oldp+18,((0x7fffffU & vlTOPp->io_input2)),23);
-        tracep->chgBit(oldp+19,((1U & ((vlTOPp->io_input1 
-                                        & vlTOPp->io_input2) 
-                                       >> 0x1fU))));
->>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
     }
 }
 
-void VNFALU::traceCleanup(void* userp, VerilatedVcd* /*unused*/) {
-    VNFALU__Syms* __restrict vlSymsp = static_cast<VNFALU__Syms*>(userp);
-    VNFALU* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+void VNFALU::traceChgThis__3(VNFALU__Syms* __restrict vlSymsp, VerilatedVcd* vcdp, uint32_t code) {
+    VNFALU* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    int c = code;
+    if (0 && vcdp && c) {}  // Prevent unused
     // Body
     {
-<<<<<<< HEAD
         vcdp->chgBit(c+137,(vlTOPp->clock));
         vcdp->chgBit(c+145,(vlTOPp->reset));
         vcdp->chgBus(c+153,(vlTOPp->io_input1),32);
@@ -129,10 +118,5 @@ void VNFALU::traceCleanup(void* userp, VerilatedVcd* /*unused*/) {
                                        : 0U))),23);
         vcdp->chgBus(c+249,((3U & vlTOPp->io_input2)),2);
         vcdp->chgBus(c+257,((7U & vlTOPp->io_input2)),3);
-=======
-        vlSymsp->__Vm_activity = false;
-        vlTOPp->__Vm_traceActivity[0U] = 0U;
-        vlTOPp->__Vm_traceActivity[1U] = 0U;
->>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
     }
 }

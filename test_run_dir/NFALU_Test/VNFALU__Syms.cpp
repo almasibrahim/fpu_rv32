@@ -7,16 +7,10 @@
 
 
 // FUNCTIONS
-VNFALU__Syms::~VNFALU__Syms()
-{
-}
-
-VNFALU__Syms::VNFALU__Syms(VerilatedContext* contextp, VNFALU* topp, const char* namep)
+VNFALU__Syms::VNFALU__Syms(VNFALU* topp, const char* namep)
     // Setup locals
-    : VerilatedSyms{contextp}
-    , __Vm_namep(namep)
+    : __Vm_namep(namep)
     , __Vm_activity(false)
-    , __Vm_baseCode(0)
     , __Vm_didInit(false)
     // Setup submodule names
 {

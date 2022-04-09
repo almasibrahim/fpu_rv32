@@ -7,14 +7,28 @@
 
 //==========
 
-VerilatedContext* VNFALU::contextp() {
-    return __VlSymsp->_vm_contextp__;
+VL_CTOR_IMP(VNFALU) {
+    VNFALU__Syms* __restrict vlSymsp = __VlSymsp = new VNFALU__Syms(this, name());
+    VNFALU* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Reset internal values
+    
+    // Reset structure values
+    _ctor_var_reset();
 }
 
-void VNFALU::eval_step() {
+void VNFALU::__Vconfigure(VNFALU__Syms* vlSymsp, bool first) {
+    if (0 && first) {}  // Prevent unused
+    this->__VlSymsp = vlSymsp;
+}
+
+VNFALU::~VNFALU() {
+    delete __VlSymsp; __VlSymsp=NULL;
+}
+
+void VNFALU::eval() {
     VL_DEBUG_IF(VL_DBG_MSGF("+++++TOP Evaluate VNFALU::eval\n"); );
     VNFALU__Syms* __restrict vlSymsp = this->__VlSymsp;  // Setup global symbol table
-    VNFALU* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    VNFALU* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
 #ifdef VL_DEBUG
     // Debug assertions
     _eval_debug_assertions();
@@ -72,12 +86,11 @@ void VNFALU::_eval_initial_loop(VNFALU__Syms* __restrict vlSymsp) {
 
 VL_INLINE_OPT void VNFALU::_combo__TOP__1(VNFALU__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VNFALU::_combo__TOP__1\n"); );
-    VNFALU* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    VNFALU* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->NFALU__DOT__xorSign = (1U & ((vlTOPp->io_input1 
                                           ^ vlTOPp->io_input2) 
                                          >> 0x1fU));
-<<<<<<< HEAD
     vlTOPp->NFALU__DOT__andSign = (1U & ((vlTOPp->io_input1 
                                           & vlTOPp->io_input2) 
                                          >> 0x1fU));
@@ -152,28 +165,12 @@ VL_INLINE_OPT void VNFALU::_combo__TOP__1(VNFALU__Syms* __restrict vlSymsp) {
                                                 & (vlTOPp->io_input2 
                                                    >> 0x17U)))
                                             ? (((IData)(vlTOPp->NFALU__DOT__xorSign) 
-=======
-    if (((IData)(vlTOPp->NFALU__DOT__xorSign) & ((0x7fffffU 
-                                                  & vlTOPp->io_input1) 
-                                                 == 
-                                                 (0x7fffffU 
-                                                  & vlTOPp->io_input2)))) {
-        vlTOPp->NFALU__DOT__resExp = 0U;
-        vlTOPp->NFALU__DOT__resFrac = 0U;
-    } else {
-        vlTOPp->NFALU__DOT__resExp = (0xffU & (((IData)(vlTOPp->NFALU__DOT__xorSign) 
->>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
                                                 & ((0x7fffffU 
                                                     & vlTOPp->io_input1) 
                                                    == 
                                                    (0x7fffffU 
                                                     & vlTOPp->io_input2)))
-<<<<<<< HEAD
                                                 ? 0U
-=======
-                                                ? (vlTOPp->io_input1 
-                                                   >> 0x17U)
->>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
                                                 : (
                                                    ((IData)(vlTOPp->NFALU__DOT__xorSign) 
                                                     & ((0x7fffffU 
@@ -251,55 +248,16 @@ VL_INLINE_OPT void VNFALU::_combo__TOP__1(VNFALU__Syms* __restrict vlSymsp) {
                                                        (0x7fffffU 
                                                         & vlTOPp->io_input2)))
                                                     ? 
-<<<<<<< HEAD
                                                    ((0x7fffffU 
                                                      & vlTOPp->io_input2) 
                                                     - 
                                                     (0x7fffffU 
                                                      & vlTOPp->io_input1))
-=======
-                                                   (vlTOPp->io_input1 
-                                                    >> 0x17U)
->>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
                                                     : 
-                                                   ((IData)(1U) 
-                                                    + 
-                                                    (vlTOPp->io_input1 
-                                                     >> 0x17U)))));
-        vlTOPp->NFALU__DOT__resFrac = (0xffffffU & 
-                                       (((IData)(vlTOPp->NFALU__DOT__xorSign) 
-                                         & ((0x7fffffU 
-                                             & vlTOPp->io_input1) 
-                                            > (0x7fffffU 
-                                               & vlTOPp->io_input2)))
-                                         ? ((0x7fffffU 
-                                             & vlTOPp->io_input1) 
-                                            - (0x7fffffU 
-                                               & vlTOPp->io_input2))
-                                         : (((IData)(vlTOPp->NFALU__DOT__xorSign) 
-                                             & ((0x7fffffU 
-                                                 & vlTOPp->io_input1) 
-                                                < (0x7fffffU 
-                                                   & vlTOPp->io_input2)))
-                                             ? ((0x7fffffU 
-                                                 & vlTOPp->io_input2) 
-                                                - (0x7fffffU 
-                                                   & vlTOPp->io_input1))
-                                             : (((0x7fffffU 
-                                                  & vlTOPp->io_input1) 
-                                                 == 
-                                                 (0x7fffffU 
-                                                  & vlTOPp->io_input2))
-                                                 ? 
-                                                (0x7fffffU 
-                                                 & vlTOPp->io_input1)
-                                                 : 
-                                                (0x7fffffU 
-                                                 & (((0x7fffffU 
+                                                   (((0x7fffffU 
                                                       & vlTOPp->io_input1) 
-                                                     + 
+                                                     == 
                                                      (0x7fffffU 
-<<<<<<< HEAD
                                                       & vlTOPp->io_input2))
                                                      ? 
                                                     (0x7fffffU 
@@ -373,19 +331,6 @@ VL_INLINE_OPT void VNFALU::_combo__TOP__1(VNFALU__Syms* __restrict vlSymsp) {
                                              ? ((IData)(vlTOPp->NFALU__DOT__resExp) 
                                                 - (IData)(0xaU))
                                              : ((1U 
-=======
-                                                      & vlTOPp->io_input2)) 
-                                                    >> 1U))))));
-    }
-    if ((1U == (0x7ffU & (vlTOPp->NFALU__DOT__resFrac 
-                          >> 0xdU)))) {
-        vlTOPp->NFALU__DOT___GEN_29 = (0xffU & ((IData)(vlTOPp->NFALU__DOT__resExp) 
-                                                - (IData)(0xaU)));
-        vlTOPp->NFALU__DOT___GEN_28 = ((QData)((IData)(vlTOPp->NFALU__DOT__resFrac)) 
-                                       << 0xaU);
-    } else {
-        vlTOPp->NFALU__DOT___GEN_29 = (0xffU & ((1U 
->>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
                                                  == 
                                                  (0x3ffU 
                                                   & (vlTOPp->NFALU__DOT__resFrac 
@@ -465,7 +410,6 @@ VL_INLINE_OPT void VNFALU::_combo__TOP__1(VNFALU__Syms* __restrict vlSymsp) {
                                                          ? 
                                                         ((IData)(vlTOPp->NFALU__DOT__resExp) 
                                                          - (IData)(1U))
-<<<<<<< HEAD
                                                          : 0U)))))))))));
     vlTOPp->NFALU__DOT___GEN_56 = ((1U == (0x7ffU & 
                                            (vlTOPp->NFALU__DOT__resFrac 
@@ -553,85 +497,6 @@ VL_INLINE_OPT void VNFALU::_combo__TOP__1(VNFALU__Syms* __restrict vlSymsp) {
                                                                               (vlTOPp->NFALU__DOT__resFrac 
                                                                                << 1U)
                                                                                : 0U))))))))))));
-=======
-                                                         : 0U))))))))));
-        vlTOPp->NFALU__DOT___GEN_28 = ((1U == (0x3ffU 
-                                               & (vlTOPp->NFALU__DOT__resFrac 
-                                                  >> 0xeU)))
-                                        ? ((QData)((IData)(vlTOPp->NFALU__DOT__resFrac)) 
-                                           << 9U) : 
-                                       ((1U == (0x1ffU 
-                                                & (vlTOPp->NFALU__DOT__resFrac 
-                                                   >> 0xfU)))
-                                         ? (QData)((IData)(
-                                                           (vlTOPp->NFALU__DOT__resFrac 
-                                                            << 8U)))
-                                         : (QData)((IData)(
-                                                           ((1U 
-                                                             == 
-                                                             (0xffU 
-                                                              & (vlTOPp->NFALU__DOT__resFrac 
-                                                                 >> 0x10U)))
-                                                             ? 
-                                                            (vlTOPp->NFALU__DOT__resFrac 
-                                                             << 7U)
-                                                             : 
-                                                            ((1U 
-                                                              == 
-                                                              (0x7fU 
-                                                               & (vlTOPp->NFALU__DOT__resFrac 
-                                                                  >> 0x11U)))
-                                                              ? 
-                                                             (vlTOPp->NFALU__DOT__resFrac 
-                                                              << 6U)
-                                                              : 
-                                                             ((1U 
-                                                               == 
-                                                               (0x3fU 
-                                                                & (vlTOPp->NFALU__DOT__resFrac 
-                                                                   >> 0x12U)))
-                                                               ? 
-                                                              (vlTOPp->NFALU__DOT__resFrac 
-                                                               << 5U)
-                                                               : 
-                                                              ((1U 
-                                                                == 
-                                                                (0x1fU 
-                                                                 & (vlTOPp->NFALU__DOT__resFrac 
-                                                                    >> 0x13U)))
-                                                                ? 
-                                                               (vlTOPp->NFALU__DOT__resFrac 
-                                                                << 4U)
-                                                                : 
-                                                               ((1U 
-                                                                 == 
-                                                                 (0xfU 
-                                                                  & (vlTOPp->NFALU__DOT__resFrac 
-                                                                     >> 0x14U)))
-                                                                 ? 
-                                                                (vlTOPp->NFALU__DOT__resFrac 
-                                                                 << 3U)
-                                                                 : 
-                                                                ((1U 
-                                                                  == 
-                                                                  (7U 
-                                                                   & (vlTOPp->NFALU__DOT__resFrac 
-                                                                      >> 0x15U)))
-                                                                  ? 
-                                                                 (vlTOPp->NFALU__DOT__resFrac 
-                                                                  << 2U)
-                                                                  : 
-                                                                 ((1U 
-                                                                   == 
-                                                                   (3U 
-                                                                    & (vlTOPp->NFALU__DOT__resFrac 
-                                                                       >> 0x16U)))
-                                                                   ? 
-                                                                  (vlTOPp->NFALU__DOT__resFrac 
-                                                                   << 1U)
-                                                                   : 0U)))))))))));
-    }
->>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
     vlTOPp->NFALU__DOT__temExp = (0xffU & (((~ (vlTOPp->NFALU__DOT__resFrac 
                                                 >> 0x17U)) 
                                             & (0U != (IData)(vlTOPp->NFALU__DOT__resExp)))
@@ -723,15 +588,9 @@ VL_INLINE_OPT void VNFALU::_combo__TOP__1(VNFALU__Syms* __restrict vlSymsp) {
                                                             ? 
                                                            ((IData)(vlTOPp->NFALU__DOT__resExp) 
                                                             - (IData)(0xbU))
-<<<<<<< HEAD
                                                             : (IData)(vlTOPp->NFALU__DOT___GEN_57)))))))))))
                                             : (IData)(vlTOPp->NFALU__DOT__resExp)));
     vlTOPp->NFALU__DOT___GEN_76 = ((1U == (0x1fffffU 
-=======
-                                                            : (IData)(vlTOPp->NFALU__DOT___GEN_29)))))))))))
-                                            : (IData)(vlTOPp->NFALU__DOT__resExp)));
-    vlTOPp->NFALU__DOT___GEN_48 = ((1U == (0x1fffffU 
->>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
                                            & (vlTOPp->NFALU__DOT__resFrac 
                                               >> 3U)))
                                     ? ((QData)((IData)(vlTOPp->NFALU__DOT__resFrac)) 
@@ -797,7 +656,6 @@ VL_INLINE_OPT void VNFALU::_combo__TOP__1(VNFALU__Syms* __restrict vlSymsp) {
                                                       ? 
                                                      ((QData)((IData)(vlTOPp->NFALU__DOT__resFrac)) 
                                                       << 0xbU)
-<<<<<<< HEAD
                                                       : vlTOPp->NFALU__DOT___GEN_56))))))))));
     vlTOPp->NFALU__DOT___GEN_78 = (((~ (vlTOPp->NFALU__DOT__resFrac 
                                         >> 0x17U)) 
@@ -812,28 +670,6 @@ VL_INLINE_OPT void VNFALU::_combo__TOP__1(VNFALU__Syms* __restrict vlSymsp) {
                               & ((0x7fffffU & vlTOPp->io_input1) 
                                  == (0x7fffffU & vlTOPp->io_input2)))
                               ? 0U : (((IData)(vlTOPp->NFALU__DOT__xorSign) 
-=======
-                                                      : vlTOPp->NFALU__DOT___GEN_28))))))))));
-    vlTOPp->NFALU__DOT___GEN_50 = (((~ (vlTOPp->NFALU__DOT__resFrac 
-                                        >> 0x17U)) 
-                                    & (0U != (IData)(vlTOPp->NFALU__DOT__resExp)))
-                                    ? vlTOPp->NFALU__DOT___GEN_48
-                                    : (QData)((IData)(vlTOPp->NFALU__DOT__resFrac)));
-    vlTOPp->io_result = (((IData)(vlTOPp->NFALU__DOT__xorSign) 
-                          & ((0x7fffffU & vlTOPp->io_input1) 
-                             == (0x7fffffU & vlTOPp->io_input2)))
-                          ? 0U : (((IData)(vlTOPp->NFALU__DOT__xorSign) 
-                                   & ((0x7fffffU & vlTOPp->io_input1) 
-                                      > (0x7fffffU 
-                                         & vlTOPp->io_input2)))
-                                   ? ((0x80000000U 
-                                       & vlTOPp->io_input1) 
-                                      | (((IData)(vlTOPp->NFALU__DOT__temExp) 
-                                          << 0x17U) 
-                                         | (0x7fffffU 
-                                            & (IData)(vlTOPp->NFALU__DOT___GEN_50))))
-                                   : (((IData)(vlTOPp->NFALU__DOT__xorSign) 
->>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
                                        & ((0x7fffffU 
                                            & vlTOPp->io_input1) 
                                           > (0x7fffffU 
@@ -843,7 +679,6 @@ VL_INLINE_OPT void VNFALU::_combo__TOP__1(VNFALU__Syms* __restrict vlSymsp) {
                                           | (((IData)(vlTOPp->NFALU__DOT__temExp) 
                                               << 0x17U) 
                                              | (0x7fffffU 
-<<<<<<< HEAD
                                                 & (IData)(vlTOPp->NFALU__DOT___GEN_78))))
                                        : (((IData)(vlTOPp->NFALU__DOT__xorSign) 
                                            & ((0x7fffffU 
@@ -866,36 +701,39 @@ VL_INLINE_OPT void VNFALU::_combo__TOP__1(VNFALU__Syms* __restrict vlSymsp) {
                                   : ((3U == (IData)(vlTOPp->NFALU__DOT__diff))
                                       ? vlTOPp->NFALU__DOT___io_result_T_2
                                       : 0U)) : 0U));
-=======
-                                                & (IData)(vlTOPp->NFALU__DOT___GEN_50))))
-                                       : ((0x80000000U 
-                                           & (vlTOPp->io_input1 
-                                              & vlTOPp->io_input2)) 
-                                          | (((IData)(vlTOPp->NFALU__DOT__resExp) 
-                                              << 0x17U) 
-                                             | (0x7fffffU 
-                                                & vlTOPp->NFALU__DOT__resFrac))))));
->>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
 }
 
 void VNFALU::_eval(VNFALU__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VNFALU::_eval\n"); );
-    VNFALU* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    VNFALU* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->_combo__TOP__1(vlSymsp);
-    vlTOPp->__Vm_traceActivity[1U] = 1U;
+    vlTOPp->__Vm_traceActivity = (2U | vlTOPp->__Vm_traceActivity);
+}
+
+void VNFALU::_eval_initial(VNFALU__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VNFALU::_eval_initial\n"); );
+    VNFALU* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+}
+
+void VNFALU::final() {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VNFALU::final\n"); );
+    // Variables
+    VNFALU__Syms* __restrict vlSymsp = this->__VlSymsp;
+    VNFALU* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+}
+
+void VNFALU::_eval_settle(VNFALU__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VNFALU::_eval_settle\n"); );
+    VNFALU* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->_combo__TOP__1(vlSymsp);
+    vlTOPp->__Vm_traceActivity = (1U | vlTOPp->__Vm_traceActivity);
 }
 
 VL_INLINE_OPT QData VNFALU::_change_request(VNFALU__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VNFALU::_change_request\n"); );
-    VNFALU* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    return (vlTOPp->_change_request_1(vlSymsp));
-}
-
-VL_INLINE_OPT QData VNFALU::_change_request_1(VNFALU__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VNFALU::_change_request_1\n"); );
-    VNFALU* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    VNFALU* __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     // Change detection
     QData __req = false;  // Logically a bool
@@ -916,7 +754,6 @@ void VNFALU::_eval_debug_assertions() {
         Verilated::overWidthError("io_rmm");}
 }
 #endif  // VL_DEBUG
-<<<<<<< HEAD
 
 void VNFALU::_ctor_var_reset() {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VNFALU::_ctor_var_reset\n"); );
@@ -945,5 +782,3 @@ void VNFALU::_ctor_var_reset() {
     NFALU__DOT___io_result_T_2 = VL_RAND_RESET_I(32);
     __Vm_traceActivity = 0;
 }
-=======
->>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5

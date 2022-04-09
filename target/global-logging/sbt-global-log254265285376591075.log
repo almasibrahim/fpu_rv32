@@ -1,4 +1,6 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(NFALUTest, org.scalatest.tools.Framework$$anon$1@1874c598, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly NFALUTest -- -DwriteVcd=1, Some(2e16a080-70c9-43fc-b41d-e1d3f2c5d32c), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
 [0m[[0m[31merror[0m] [0m[0mjava.lang.NumberFormatException: For input string: "======"[0m
 [0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)[0m
 [0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Long.parseLong(Long.java:692)[0m
@@ -152,5 +154,5 @@
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	NFALUTest[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 6 s, completed Apr 9, 2022, 11:06:58 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

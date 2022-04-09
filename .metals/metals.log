@@ -269,3 +269,10 @@ WARNING: Unmatched cancel notification for request id 733
 2022.04.09 23:01:43 WARN  no build target for: /home/almas/Videos/fpu_rv32/src/test/scala/NFALUTest.scala[0m
 Apr 09, 2022 11:01:45 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+Apr 09, 2022 11:05:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 972
+Apr 09, 2022 11:05:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 977
+Apr 09, 2022 11:06:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 983
+2022.04.09 23:06:15 WARN  no build target for: /home/almas/Videos/fpu_rv32/src/test/scala/NFALUTest.scala[0m
