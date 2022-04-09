@@ -10,11 +10,11 @@ default: VNFALU
 # Perl executable (from $PERL)
 PERL = perl
 # Path to Verilator kit (from $VERILATOR_ROOT)
-VERILATOR_ROOT = /usr/share/verilator
+VERILATOR_ROOT = /opt/homebrew/Cellar/verilator/4.200/share/verilator
 # SystemC include directory with systemc.h (from $SYSTEMC_INCLUDE)
-SYSTEMC_INCLUDE ?= /usr/include
+SYSTEMC_INCLUDE ?= 
 # SystemC library directory with libsystemc.a (from $SYSTEMC_LIBDIR)
-SYSTEMC_LIBDIR ?= /usr/lib/x86_64-linux-gnu
+SYSTEMC_LIBDIR ?= 
 
 ### Switches...
 # SystemC output mode?  0/1 (from --sc)
@@ -44,7 +44,11 @@ VM_USER_CLASSES = \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
+<<<<<<< HEAD
 	/home/almas/Videos/fpu_rv32/test_run_dir/NFALU_Test \
+=======
+	/Users/shahzaib/fpu_rv32/test_run_dir/NFALU_Test \
+>>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
 
 
 ### Default rules...
@@ -56,12 +60,16 @@ include $(VERILATOR_ROOT)/include/verilated.mk
 ### Executable rules... (from --exe)
 VPATH += $(VM_USER_DIR)
 
+<<<<<<< HEAD
 NFALU-harness.o: /home/almas/Videos/fpu_rv32/test_run_dir/NFALU_Test/NFALU-harness.cpp
+=======
+NFALU-harness.o: /Users/shahzaib/fpu_rv32/test_run_dir/NFALU_Test/NFALU-harness.cpp
+>>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 
 ### Link rules... (from --exe)
-VNFALU: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a
-	$(LINK) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@ $(LIBS) $(SC_LIBS)
+VNFALU: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a $(VM_HIER_LIBS)
+	$(LINK) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) $(LIBS) $(SC_LIBS) -o $@
 
 
 # Verilated -*- Makefile -*-

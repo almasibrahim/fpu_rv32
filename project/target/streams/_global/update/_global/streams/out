@@ -1,3 +1,8 @@
 [0m[[0m[0mdebug[0m] [0m[0mnot up to date. inChanged = true, force = false[0m
+<<<<<<< HEAD
 [0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/home/almas/Videos/fpu_rv32/project/"), "fpu_rv32-build")...[0m
 [0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/home/almas/Videos/fpu_rv32/project/"), "fpu_rv32-build")[0m
+=======
+[0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/Users/shahzaib/fpu_rv32/project/"), "fpu_rv32-build")...[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/Users/shahzaib/fpu_rv32/project/"), "fpu_rv32-build")[0m
+>>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5

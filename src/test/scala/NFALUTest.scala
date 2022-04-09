@@ -195,24 +195,3 @@ class NFALUTest extends FreeSpec with ChiselScalatestTester {
 
 
 
-
-
-
-// Working
-    //   c.io.instIn.poke("h952E9426".U)
-    //   c.io.pcIn.poke(12.U)
-    //   c.clock.step(1)
-    // //   c.io.pcIn.poke(c.io.pcOut.peek)
-    // //   c.clock.step(1)
-    //   c.io.pcIn.poke(c.io.pcOut.peek)
-    //   c.io.instIn.poke("h00940433".U)
-    //   c.clock.step(1)
-    //   c.io.pcIn.poke(c.io.pcOut.peek)
-    //   c.clock.step(1)
-    //   c.io.instIn.poke("h952E9426".U)
-    //   c.io.pcIn.poke(c.io.pcOut.peek)
-    //   c.clock.step(1)
-    //   c.io.pcIn.poke(c.io.pcOut.peek)
-    //   c.clock.step(1)
-    //   c.io.pcIn.poke(c.io.pcOut.peek)
-    //   c.io.instIn.poke("h00940433".U)

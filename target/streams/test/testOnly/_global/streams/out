@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 [0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(NFALUTest, org.scalatest.tools.Framework$$anon$1@7181f13e, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mNFALUTest:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- NFALU Test[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 6 seconds, 251 milliseconds.[0m[0m
+=======
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(NFALUTest, org.scalatest.tools.Framework$$anon$1@26ed2810, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mNFALUTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- NFALU Test[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 4 seconds, 930 milliseconds.[0m[0m
+>>>>>>> 314c2f877bccef973de4977addaf0feb0e9625e5
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0[0m[0m
